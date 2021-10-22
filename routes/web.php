@@ -2,6 +2,7 @@
 use App\Http\Controllers\QuestionsController;
 use App\Http\Controllers\AnswersController;
 use App\Http\Controllers\CommentsController;
+use App\Http\Controllers\Controller;
 use App\Http\Controllers\TagsController;
 use App\Http\Controllers\UsersController;
 use App\Models\Question;
@@ -35,4 +36,5 @@ Route::resource('tags', TagsController::class)->parameters([
 ]);
 
 Route::resource('comments', CommentsController::class);
+Route::get('search',[Controller::class,'search'])->name('search');
 
